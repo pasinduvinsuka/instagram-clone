@@ -5,6 +5,7 @@
 .app{
   background-color: #fafafa;
   height: 100vh;
+  display: block;
 }
 
 .app__header{

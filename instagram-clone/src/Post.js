@@ -1,18 +1,28 @@
 import React from 'react';
 import './Post.css';
+import Avatar from "@mui/material/Avatar";
 
 
-function Post() {
+function Post({username, caption, imageUrl}) {
   return (
-    <div>
+    <div className='post'>
+        <div className='post__header'>
+        
+        <Avatar 
+            className='post__avatar'
+            alt="Remy Sharp" 
+            src="/static/images/avatar/1.jpg" 
+        />
+        
+        <h3>{username}</h3>
         {/* header -> avatar + username */}
-        <h3>Username</h3>
-
-        <img className="post__image" src="https://www.freecodecamp.org/news/content/images/size/w600/2023/04/zustand.png" alt=''/>
+        </div>
+        
+        <img className="post__image" src={imageUrl} alt=''/>
         
 
 
-        <h4 className='post__text'><strong>cyb.x: </strong>day 01 of learning 🔥</h4>
+        <h4 className='post__text'><strong>{username}</strong>{caption}</h4>
        
 
     </div>
